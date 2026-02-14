@@ -1,0 +1,128 @@
+// Import Bootstrap functions first
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+// Fonts
+$font-family-base: "Grape Nuts", cursive;
+
+// Make fonts bigger
+$font-size-root: 140%;
+
+// Ocean Theme Palette
+$primary: #003366; // Deep ocean blue
+$secondary: #006699; // Medium ocean blue
+$success: #00a3a3; // Tropical teal
+$info: #3399ff; // Bright azure
+$warning: #ffd166; // Sandy yellow
+$danger: #cc3300; // Coral red
+$light: #e6f4ff; // Wave foam light blue
+$dark: #001f3f; // Deep navy
+
+// Global text colors
+$body-color: $primary;
+$link-color: $primary;
+$link-hover-color: $secondary;
+$headings-color: $primary;
+
+// Navbar overrides
+$navbar-light-color: $primary;
+$navbar-light-hover-color: $secondary;
+$navbar-light-active-color: $secondary;
+$navbar-light-brand-color: $primary;
+$navbar-brand-font-size: 1.5rem;
+
+// Buttons
+
+// Hero section
+.hero {
+    /* static layout */
+    width: 100%;
+    height: 100vh;
+    position: relative; /* anchor for absolute content */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1.0s ease-in-out;
+}
+
+.hero.visible {
+    opacity: 1;
+}
+
+.bio-box {
+    position: absolute;
+    bottom: 0rem;
+    padding-bottom: 8px;
+    left: 50%;
+    min-height: 90px;
+    transform: translateX(-50%);
+    max-width: 600px;
+    color: $primary;
+    background-color: rgba($light, 0.7);
+    border-color: rgba($light, 0.7);
+}
+
+.bio-box .btn {
+    min-width: 140px;
+}
+
+@media (min-width: 576px) {
+    .bio-box {
+        bottom: 2rem;
+        border-radius: 0.2rem;
+    }
+    .bio-box .col-sm,
+    .bio-box .col-sm-auto {
+        display: flex;
+        align-items: center;
+        min-height: 102px;
+    }
+}
+
+.content {
+    color: #fff;
+    background-color: rgba($secondary, 0.35);
+    border-color: rgba($secondary, 0.35);
+    border-radius: 0.2rem;
+}
+
+.content-light {
+    color: $primary;
+    background-color: rgba($light, 0.35);
+    border-color: rgba($light, 0.35);
+    border-radius: 0.2rem;
+}
+
+.btn.btn-primary-semi-transparent {
+    @include button-variant( rgba($primary, 0.35), rgba($primary, 0.35), #f5f5f5, rgba($secondary, 0.35), rgba($secondary, 0.35), #fff)
+}
+
+.btn.btn-secondary-semi-transparent {
+    @include button-variant(rgba($secondary, 0.35), rgba($secondary, 0.35), #fff, rgba($primary, 0.35), rgba($primary, 0.35), #f5f5f5)
+}
+
+// Icons
+.icon-secondary {
+    color: $secondary !important;
+}
+
+.contact-link:hover .svg-inline--fa {
+    color: $primary !important;
+}
+
+.bio-box .svg-inline--fa.fa-sm {
+    vertical-align: -0.25em;
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+.nav-link.active {
+    font-weight: 600;
+}
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap";
