@@ -1,5 +1,5 @@
 import Hero from "./Hero";
-import CenteredNavbar from "./CenteredNavBar";
+import NavBar from "./NavBar";
 
 type LayoutProps = {
     heroImage?: string; // hero image flename;
@@ -12,7 +12,7 @@ type LayoutProps = {
 const Layout: React.FC<LayoutProps> = ({ heroImage, heroContent, buttonText, buttonLink, children }) => {
     return (
         <>
-            <CenteredNavbar />
+            <NavBar />
             <Hero image={heroImage} content={heroContent} buttonText={buttonText} buttonLink={buttonLink} />
             {children && <main>{children}</main>}
         </>

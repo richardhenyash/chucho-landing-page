@@ -4,7 +4,7 @@ import {
     Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem, NavLink, Container,
 } from 'reactstrap';
 
-const CenteredNavbar: React.FC = () => {
+const NavBar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
 
@@ -33,4 +33,4 @@ const CenteredNavbar: React.FC = () => {
     );
 };
 
-export default CenteredNavbar;
+export default NavBar;

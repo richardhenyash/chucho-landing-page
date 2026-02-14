@@ -2,7 +2,7 @@
 
 # React + Redux Toolkit + MDX + Vite Starter
 
-A minimal starter using React (TypeScript), Redux Toolkit for state, MDX for content, Vite for bundling, and a centered Bootstrap navbar implemented with Reactstrap.
+A minimal starter using React (TypeScript), Redux Toolkit for state, Vite for bundling, and a Bootstrap navbar implemented with Reactstrap.
 
 ## Prerequisites
 - Node.js 18+
