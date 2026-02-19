@@ -26,10 +26,5 @@ Thumbs.db
 *.tmp
 *.swp
 
-# Optional: lock files if you want to ignore them (rare)
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-
 # Visual Studio
 .vs/
